@@ -1,10 +1,11 @@
 pipeline {
   agent any
   stages {
-    stage('build-stage') {
+    stage('') {
       steps {
-        catchError() {
-          build(job: 'write_disk', propagate: true)
+        ws(dir: 'D:\\PerlScripts\\') {
+          pwd()
+          bat(script: 'perl write-perf-random.pl -esapath=Z:\\ -flen=555m -number=10', returnStatus: true, returnStdout: true)
         }
 
       }
