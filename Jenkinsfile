@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('disk-write') {
       steps {
         ws(dir: 'D:\\PerlScripts\\') {
           pwd()
