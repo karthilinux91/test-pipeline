@@ -4,7 +4,7 @@ pipeline {
     stage('build-stage') {
       steps {
         catchError() {
-          build(quietPeriod: 5, wait: true, job: 'build')
+          build(job: 'write_disk', propagate: true)
         }
 
       }
