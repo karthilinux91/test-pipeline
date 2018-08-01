@@ -3,7 +3,17 @@ pipeline {
   stages {
     stage('stage1') {
       steps {
-        build(propagate: true, job: 'hostname')
+        bat 'hostname'
+      }
+    }
+    stage('stage2') {
+      steps {
+        bat 'hostname2'
+      }
+    }
+    stage('stage') {
+      steps {
+        bat 'hostname'
       }
     }
   }
